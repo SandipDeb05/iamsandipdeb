@@ -1,5 +1,5 @@
 import { allProjects } from "@/data/projects";
-import { ExternalLinkIcon, CodeBracketIcon } from "@heroicons/react/24/outline";
+import { CodeBracketIcon } from "@heroicons/react/24/outline";
 
 export default function Projects() {
   return (
