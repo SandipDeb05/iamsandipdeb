@@ -46,7 +46,7 @@ const BlogPostContent = ({ content }: BlogPostContentProps) => {
 
         // Lists
         .replace(/^- (.*$)/gim, "<li>$1</li>")
-        .replace(/(<li>.*<\/li>)/s, "<ul>$1</ul>")
+        .replace(/(<li>.*<\/li>)/, "<ul>$1</ul>")
 
         // Paragraphs
         .replace(/\n\n/g, "</p><p>")
