@@ -14,9 +14,8 @@ export default function Home() {
             <span className="text-blue-600 dark:text-blue-400">Sandip Deb</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-700 dark:text-gray-300 mb-8 max-w-3xl mx-auto">
-            A passionate developer building modern web applications with
-            cutting-edge technologies. I love creating clean, efficient code and
-            solving complex problems.
+            A Software Engineer with a strong foundation in frontend
+            technologies and an ambition to grow into a full-stack developer.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -42,12 +41,15 @@ export default function Home() {
           <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-6">
             About Me
           </h2>
-          <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-            I'm a full-stack developer with expertise in React, Node.js, and
+          <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+            I'm a frontend developer with expertise in React, Next.js, and
             modern web technologies. I enjoy building scalable applications,
-            contributing to open source, and sharing knowledge through technical
-            writing. When I'm not coding, you can find me exploring new
-            technologies, reading tech blogs, or enjoying a good cup of coffee.
+            optimizing performance, and integrating AI-driven solutions into
+            real-world platforms.
+          </p>
+          <p className="text-md text-gray-700 dark:text-gray-300 leading-relaxed">
+            When I'm not coding, you can find me exploring new technologies,
+            sketching project ideas, or enjoying a good cup of coffee.
           </p>
           <Link
             href="/about"
