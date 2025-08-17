@@ -68,8 +68,8 @@ export default function Blog() {
           ))}
         </div>
 
-        {/* Newsletter Signup */}
-        <div className="mt-16 bg-white dark:bg-gray-900 rounded-lg p-8 border border-gray-200 dark:border-gray-700 text-center">
+        {/*TODO: Newsletter Signup */}
+        {/* <div className="mt-16 bg-white dark:bg-gray-900 rounded-lg p-8 border border-gray-200 dark:border-gray-700 text-center">
           <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-4">
             Stay Updated
           </h2>
@@ -87,7 +87,7 @@ export default function Blog() {
               Subscribe
             </button>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

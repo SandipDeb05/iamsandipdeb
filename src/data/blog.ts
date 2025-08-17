@@ -9,94 +9,184 @@ export interface BlogPost {
 
 export const allPosts: BlogPost[] = [
   {
-    slug: "getting-started-with-nextjs-13",
-    title: "Getting Started with Next.js 13 App Router",
+    slug: "real-time-data-streaming-in-react-with-server-sent-envents-sse",
+    title: "Real-Time Data Streaming in React with Server-Sent Events (SSE)",
     description:
-      "Learn how to build modern web applications using Next.js 13 with the new App Router and React Server Components.",
-    date: "2024-01-15",
-    tags: ["Next.js", "React", "Web Development"],
-    content: `
-# Getting Started with Next.js 13 App Router
+      "Server-Sent Events (SSE) is a technology that allows servers to send real-time updates to web clients over a single HTTP connection",
+    date: "2024-12-15",
+    tags: ["React", "Web Development", "Artificial Intelligence", "SSE"],
+    content: `# Getting Started with Server-Sent Events (SSE) in React
 
-Next.js 13 introduces the new App Router, which brings React Server Components and improved routing to the framework.
+In the world of modern web apps, real-time updates have become a necessity. Whether it's live notifications, chat applications, or dashboards, real-time data enriches user experience.
 
-## What's New in Next.js 13?
+In this post, I'll walk you through implementing Server-Sent Events (SSE) in a React app to handle real-time data streaming effectively.
 
-- **App Router**: A new file-system based router
-- **React Server Components**: Improved performance and SEO
-- **Turbopack**: Faster bundling and development
-- **Improved TypeScript Support**: Better type safety
+## What are Server-Sent Events (SSE)?
 
-## Getting Started
+SSE is a browser-based API allowing servers to push client updates over HTTP in a one-way communication channel. Unlike WebSockets, SSE is lightweight, easy to use, and works seamlessly with HTTP/1.1.
 
-First, create a new Next.js project:
+## How SSE Works
 
-\`\`\`bash
-npx create-next-app@latest my-app --typescript --tailwind --app
-\`\`\`
+- The client establishes a persistent connection to the server using EventSource.
+- The server pushes data as a stream to the client in the form of text-based events.
+- The client listens for these updates and processes them in real time.
 
-## Key Features
+## When to Use SSE?
 
-### Server Components
-Server Components allow you to render components on the server, reducing the JavaScript bundle size sent to the client.
+SSE is perfect for:
+- Live notifications
+- Streaming logs
+- Real-time dashboards
+- Event updates (e.g., ticketing systems)
 
-### File-based Routing
-The App Router uses file-system based routing, making it intuitive to create new routes.
+## Building a React App with SSE
+
+### The Problem
+
+We want to create a real-time patient diagnosis stream based on live server updates. The server sends:
+- Patient's diagnosis list
+- Suggestions based on the diagnosis
+- Patient's gender details
+
+Our goal: Build a React component to handle this live stream of data.
+
+### Key Features of the Code
+
+- **Auto-Scrolling:** Automatically scrolls to the bottom of the container when new data arrives.
+- **Graceful Error Handling:** Closes the connection on errors to prevent memory leaks.
+- **Real-Time UI Updates:** The diagnoses and suggestions update seamlessly as new data streams in.
+
+## Why Choose SSE?
+
+- **Simple to Implement:** No third-party libraries are required.
+- **Built-in Reliability:** Automatically retries connections when interrupted.
+- **Lightweight:** Ideal for streaming plain text updates.
+
+## What I Learned
+
+- SSE is a game-changer for real-time, one-way communication.
+- It's perfect for scenarios where server → client updates dominate.
+- With proper state management and UI design, SSE makes real-time apps effortless to build.
 
 ## Conclusion
 
-Next.js 13 with the App Router is a significant step forward for the framework, offering better performance and developer experience.
-    `,
+SSE is a lightweight and powerful tool for building real-time applications in React. Whether it's live notifications, dashboards, or data streams, SSE simplifies the development process while ensuring reliability.
+
+If you're looking to build a scalable, real-time React app, give SSE a try.`,
   },
   {
-    slug: "typescript-best-practices",
-    title: "TypeScript Best Practices for React Developers",
+    slug: "optimizing-react-performance-with-usememo-and-usecallback",
+    title: "Optimizing React Performance with useMemo and useCallback",
     description:
-      "Essential TypeScript patterns and best practices that every React developer should know to write more maintainable code.",
-    date: "2024-01-10",
-    tags: ["TypeScript", "React", "Best Practices"],
-    content: `
-# TypeScript Best Practices for React Developers
+      "Learn how to optimize React applications using useMemo and useCallback to prevent unnecessary re-renders and boost performance.",
+    date: "2024-06-05",
+    tags: ["React", "Performance", "Optimization", "JavaScript"],
+    content: `# Optimizing React Performance with useMemo and useCallback
 
-TypeScript has become the standard for building React applications. Here are some best practices to follow.
+When building modern React applications, performance issues often arise due to unnecessary re-renders. Thankfully, React provides two hooks — \`useMemo\` and \`useCallback\` — to help optimize performance.
 
-## Type Definitions
+## Why Re-renders Happen
+React components re-render when props or state change. While this is the expected behavior, excessive re-renders can slow down apps, especially with complex UIs.
 
-Always define proper types for your props and state:
+## useMemo
+\`useMemo\` memoizes the result of an expensive calculation. React will only recompute the value when dependencies change.
 
-\`\`\`typescript
-interface UserProps {
-  id: string;
-  name: string;
-  email: string;
-  avatar?: string;
-}
-
-const UserCard: React.FC<UserProps> = ({ id, name, email, avatar }) => {
-  return (
-    <div>
-      <h3>{name}</h3>
-      <p>{email}</p>
-    </div>
-  );
-};
+\`\`\`tsx
+const memoizedValue = useMemo(() => expensiveCalculation(data), [data]);
 \`\`\`
 
-## Generic Types
+## useCallback
+\`useCallback\` memoizes a function, ensuring that the function reference remains the same unless dependencies change.
 
-Use generics for reusable components:
+\`\`\`tsx
+const handleClick = useCallback(() => {
+  console.log("Clicked!");
+}, []);
+\`\`\`
 
-\`\`\`typescript
-interface ListProps<T> {
-  items: T[];
-  renderItem: (item: T) => React.ReactNode;
-}
+## Best Practices
+- Use these hooks for expensive calculations or stable function references.
+- Avoid over-optimizing — they should not be used everywhere.
 
-function List<T>({ items, renderItem }: ListProps<T>) {
+## Conclusion
+\`useMemo\` and \`useCallback\` are powerful tools to prevent unnecessary re-renders and improve performance. With thoughtful usage, they can significantly enhance user experience in React apps.`,
+  },
+  {
+    slug: "nextjs-image-optimization-guide",
+    title: "A Complete Guide to Image Optimization in Next.js",
+    description:
+      "Boost performance and SEO in your Next.js apps with built-in Image Optimization features, including responsive and lazy-loaded images.",
+    date: "2024-03-10",
+    tags: ["Next.js", "Performance", "SEO", "Web Development"],
+    content: `# A Complete Guide to Image Optimization in Next.js
+
+Images are often the largest assets in a web app, directly affecting load time and SEO. Next.js simplifies image optimization with the \`next/image\` component.
+
+## Why Optimize Images?
+- Faster page loads
+- Better SEO ranking
+- Reduced bandwidth usage
+
+## Using the Image Component
+- Automatic resizing
+- Lazy loading
+- Responsive images
+
+\`\`\`tsx
+import Image from "next/image";
+
+<Image 
+  src="/profile.jpg" 
+  alt="Profile picture" 
+  width={500} 
+  height={500} 
+/>
+\`\`\`
+
+## Supported Features
+- **Responsive Images:** Automatically generates multiple sizes.
+- **Lazy Loading:** Loads images as they enter the viewport.
+- **CDN Support:** Integrates with external image providers.
+
+## Conclusion
+Optimizing images in Next.js requires minimal setup but provides maximum benefits. By leveraging the built-in \`Image\` component, developers can deliver faster, more SEO-friendly applications.`,
+  },
+  {
+    slug: "react-query-data-fetching-and-caching",
+    title: "Data Fetching and Caching in React with React Query",
+    description:
+      "Learn how to simplify data fetching, caching, and synchronization in React using React Query.",
+    date: "2024-01-02",
+    tags: ["React", "React Query", "Data Fetching", "API"],
+    content: `# Data Fetching and Caching in React with React Query
+
+Fetching data in React often involves managing loading states, caching, and error handling. React Query solves these challenges with a declarative and efficient API.
+
+## Why React Query?
+- Simplifies data fetching
+- Built-in caching
+- Automatic re-fetching on window focus
+- Background updates
+
+## Example Usage
+\`\`\`tsx
+import { useQuery } from "@tanstack/react-query";
+
+const fetchUsers = async () => {
+  const res = await fetch("/api/users");
+  return res.json();
+};
+
+function Users() {
+  const { data, isLoading, error } = useQuery(["users"], fetchUsers);
+
+  if (isLoading) return <p>Loading...</p>;
+  if (error) return <p>Error fetching users</p>;
+
   return (
     <ul>
-      {items.map((item, index) => (
-        <li key={index}>{renderItem(item)}</li>
+      {data.map((user: any) => (
+        <li key={user.id}>{user.name}</li>
       ))}
     </ul>
   );
@@ -104,68 +194,7 @@ function List<T>({ items, renderItem }: ListProps<T>) {
 \`\`\`
 
 ## Conclusion
-
-Following these TypeScript best practices will make your React code more maintainable and less prone to runtime errors.
-    `,
-  },
-  {
-    slug: "tailwind-css-tips",
-    title: "Advanced Tailwind CSS Tips and Tricks",
-    description:
-      "Discover advanced Tailwind CSS techniques to create beautiful, responsive designs more efficiently.",
-    date: "2024-01-05",
-    tags: ["Tailwind CSS", "CSS", "Design"],
-    content: `
-# Advanced Tailwind CSS Tips and Tricks
-
-Tailwind CSS is a utility-first CSS framework that makes styling components quick and consistent.
-
-## Custom Utilities
-
-Create custom utilities in your \`tailwind.config.js\`:
-
-\`\`\`javascript
-module.exports = {
-  theme: {
-    extend: {
-      animation: {
-        'fade-in': 'fadeIn 0.5s ease-in-out',
-      },
-      keyframes: {
-        fadeIn: {
-          '0%': { opacity: '0' },
-          '100%': { opacity: '1' },
-        },
-      },
-    },
-  },
-};
-\`\`\`
-
-## Responsive Design
-
-Use responsive prefixes for mobile-first design:
-
-\`\`\`html
-<div class="w-full md:w-1/2 lg:w-1/3">
-  <!-- Content -->
-</div>
-\`\`\`
-
-## Dark Mode
-
-Leverage Tailwind's dark mode support:
-
-\`\`\`html
-<div class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
-  <!-- Content -->
-</div>
-\`\`\`
-
-## Conclusion
-
-These advanced Tailwind CSS techniques will help you build more sophisticated and maintainable designs.
-    `,
+React Query abstracts away complex data-fetching logic, making React apps more efficient and developer-friendly. It’s a must-have tool for modern frontend development.`,
   },
 ];
 

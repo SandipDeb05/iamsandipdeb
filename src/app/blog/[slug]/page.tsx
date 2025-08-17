@@ -76,7 +76,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
           </div>
         </header>
 
-        {/* Post Content */}
+        {/* FIXME: Post Content */}
         <article className="prose prose-custom max-w-none">
           <BlogPostContent content={post.content} />
         </article>
