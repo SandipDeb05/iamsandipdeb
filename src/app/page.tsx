@@ -42,10 +42,10 @@ export default function Home() {
             About Me
           </h2>
           <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-            I'm a frontend developer with expertise in React, Next.js, and
-            modern web technologies. I enjoy building scalable applications,
-            optimizing performance, and integrating AI-driven solutions into
-            real-world platforms.
+            I'm a Software Engineer with expertise in React, Next.js, and modern
+            web technologies. I enjoy building scalable applications, optimizing
+            performance, and integrating AI-driven solutions into real-world
+            platforms.
           </p>
           <Link
             href="/about"
