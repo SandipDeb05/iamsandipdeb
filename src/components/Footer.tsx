@@ -11,7 +11,7 @@ const Footer = () => {
 
           <div className="flex space-x-6">
             <a
-              href="https://github.com"
+              href="https://github.com/SandipDeb05"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors"
@@ -19,7 +19,7 @@ const Footer = () => {
               GitHub
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/sandipdeb05/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors"
@@ -27,12 +27,12 @@ const Footer = () => {
               LinkedIn
             </a>
             <a
-              href="https://twitter.com"
+              href="https://x.com/SandipDeb_05"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors"
             >
-              Twitter
+              X (Twitter)
             </a>
           </div>
         </div>

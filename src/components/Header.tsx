@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useTheme } from "next-themes";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import {
   SunIcon,
   MoonIcon,
@@ -11,13 +11,8 @@ import {
 } from "@heroicons/react/24/outline";
 
 const Header = () => {
-  const [mounted, setMounted] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { theme, setTheme } = useTheme();
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
   const navigation = [
     { name: "Home", href: "/" },
@@ -29,10 +24,6 @@ const Header = () => {
   const toggleTheme = () => {
     setTheme(theme === "dark" ? "light" : "dark");
   };
-
-  if (!mounted) {
-    return null;
-  }
 
   return (
     <header className="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700">
@@ -98,7 +89,7 @@ const Header = () => {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 block px-3 py-2 text-base font-medium transition-colors"
+                  className="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 block px-3 py-2 text-base font-medium transition-colors hover:bg-gray-100 dark:hover:bg-gray-800"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {item.name}
