@@ -205,13 +205,12 @@ export default function About() {
             </div>
             <div className="bg-white dark:bg-gray-800 rounded-lg p-6 border border-gray-200 dark:border-gray-700">
               <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-3">
-                Learning & Collaboration
+                Curiosity & Creativity
               </h3>
               <p className="text-gray-700 dark:text-gray-300">
-                I love continuous learning, mentoring, and knowledge-sharing.
-                Writing and discussions not only help me deepen my understanding
-                but also allow me to collaborate and grow with the developer
-                community.
+                I enjoy continuous learning and exploring new ideas with the
+                developer community. Outside of tech, I love capturing moments
+                through photography.
               </p>
             </div>
           </div>
