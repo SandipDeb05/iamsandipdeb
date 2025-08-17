@@ -47,10 +47,6 @@ export default function Home() {
             optimizing performance, and integrating AI-driven solutions into
             real-world platforms.
           </p>
-          <p className="text-md text-gray-700 dark:text-gray-300 leading-relaxed">
-            When I'm not coding, you can find me exploring new technologies,
-            sketching project ideas, or enjoying a good cup of coffee.
-          </p>
           <Link
             href="/about"
             className="inline-flex items-center mt-6 text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium"

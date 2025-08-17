@@ -1,5 +1,8 @@
 import { allProjects } from "@/data/projects";
-import { CodeBracketIcon } from "@heroicons/react/24/outline";
+import {
+  ArrowTopRightOnSquareIcon,
+  CodeBracketIcon,
+} from "@heroicons/react/24/outline";
 
 export default function Projects() {
   return (
@@ -18,16 +21,16 @@ export default function Projects() {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
           {allProjects.map((project) => (
             <div
               key={project.id}
               className="bg-white dark:bg-gray-900 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border border-gray-200 dark:border-gray-700 overflow-hidden group"
             >
               {/* Project Image Placeholder */}
-              <div className="h-48 bg-gradient-to-br from-blue-100 to-indigo-100 dark:from-gray-800 dark:to-gray-700 flex items-center justify-center">
+              {/* <div className="h-48 bg-gradient-to-br from-blue-100 to-indigo-100 dark:from-gray-800 dark:to-gray-700 flex items-center justify-center">
                 <CodeBracketIcon className="h-16 w-16 text-blue-400 dark:text-blue-500" />
-              </div>
+              </div> */}
 
               {/* Project Content */}
               <div className="p-6">
@@ -71,7 +74,7 @@ export default function Projects() {
                       rel="noopener noreferrer"
                       className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium"
                     >
-                      {/* <ExternalLinkIcon className="h-4 w-4 mr-2" /> */}
+                      <ArrowTopRightOnSquareIcon className="h-4 w-4 mr-2" />
                       Live Demo
                     </a>
                   )}
@@ -93,7 +96,7 @@ export default function Projects() {
               reach out!
             </p>
             <a
-              href="mailto:hello@example.com"
+              href="mailto:sandipdeb05@gmail.com"
               className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors"
             >
               Get In Touch

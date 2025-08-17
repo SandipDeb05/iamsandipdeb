@@ -4,39 +4,43 @@ export default function About() {
   const skills = [
     {
       category: "Frontend",
-      items: ["React", "TypeScript", "Next.js", "Tailwind CSS", "HTML/CSS"],
+      items: [
+        "React",
+        "Next",
+        "TypeScript",
+        "JavaScript",
+        "Redux",
+        "React Router",
+        "TanStack Query",
+        "HTML/CSS",
+      ],
     },
     {
       category: "Backend",
-      items: ["Node.js", "Express", "Python", "PostgreSQL", "MongoDB"],
+      items: ["Node.js", "Express.js", "GraphQL", "MongoDB", "MySQL"],
     },
     {
       category: "Tools & Others",
-      items: ["Git", "Docker", "AWS", "Figma", "Postman"],
+      items: ["Webpack", "Vite", "CI/CD (GitHub Actions)", "Vercel"],
     },
   ];
 
   const experience = [
     {
-      title: "Senior Full-Stack Developer",
-      company: "Tech Company Inc.",
-      period: "2022 - Present",
+      title: "Software Developer",
+      company: "CLIRNET Services Pvt. Ltd.",
+      period: "May 2024 - Present",
+      link: "https://www.clirnet.com/",
       description:
-        "Leading development of enterprise web applications using React, Node.js, and cloud technologies.",
+        "Built scalable features like video surveys and multilingual support for DocTube, optimized performance by 26+ PageSpeed points, integrated real-time AI assistant (AiDA) using GPT-4o Mini, and delivered UI solutions for global clients while improving code reliability with unit & integration tests.",
     },
     {
-      title: "Full-Stack Developer",
-      company: "Startup XYZ",
-      period: "2020 - 2022",
+      title: "Software Engineer",
+      company: "XopunTech India Pvt. Ltd.",
+      period: "Jan 2022 - May 2024",
+      link: "https://www.xopuntech.com/",
       description:
-        "Built and maintained multiple web applications, working closely with design and product teams.",
-    },
-    {
-      title: "Frontend Developer",
-      company: "Digital Agency ABC",
-      period: "2018 - 2020",
-      description:
-        "Developed responsive websites and web applications for various clients using modern frontend technologies.",
+        "Mentored junior developers, optimized API handling with React Context API (25% faster), integrated GraphQL Apollo Client for improved performance, and built 20+ reusable components with Storybook documentation. Awarded Employee of the Month (Feb 2022).",
     },
   ];
 
@@ -49,8 +53,8 @@ export default function About() {
             About Me
           </h1>
           <p className="text-xl text-gray-700 dark:text-gray-300 max-w-3xl mx-auto">
-            I'm a passionate developer who loves building innovative solutions
-            and learning new technologies.
+            I'm a passionate Software Engineer who loves building innovative
+            solutions and learning new technologies.
           </p>
         </div>
 
@@ -61,23 +65,26 @@ export default function About() {
           </h2>
           <div className="prose prose-lg prose-gray dark:prose-invert max-w-none">
             <p className="text-gray-700 dark:text-gray-300 mb-6">
-              I started my journey in web development over 5 years ago, and I've
-              been passionate about creating digital experiences ever since. My
-              curiosity for technology and problem-solving led me to explore
-              various aspects of software development, from frontend interfaces
-              to backend systems.
+              I started my journey in software development during my engineering
+              days, and over time, I discovered a strong passion for building
+              modern web applications. My curiosity for technology and
+              problem-solving naturally led me towards frontend development,
+              where I could combine creativity with technical skills to craft
+              impactful user experiences.
             </p>
             <p className="text-gray-700 dark:text-gray-300 mb-6">
-              Throughout my career, I've had the opportunity to work on diverse
-              projects, from small business websites to large-scale enterprise
-              applications. This experience has taught me the importance of
-              writing clean, maintainable code and building scalable solutions.
+              Since then, I've had the opportunity to work with early-stage and
+              mid-sized startups, building scalable platforms, optimizing
+              performance, and integrating AI-driven solutions into real-world
+              applications. These experiences taught me the value of clean,
+              maintainable code, collaborative teamwork, and the importance of
+              creating solutions that truly make an impact.
             </p>
             <p className="text-gray-700 dark:text-gray-300">
-              When I'm not coding, you can find me contributing to open-source
-              projects, writing technical blog posts, or exploring new
-              technologies. I believe in continuous learning and sharing
-              knowledge with the developer community.
+              When I'm not coding, you'll find me exploring new technologies,
+              sketching out project ideas, or enjoying good conversations over
+              coffee. I believe in continuous learning, mentoring others, and
+              contributing positively to every team I work with.
             </p>
           </div>
         </section>
@@ -131,9 +138,14 @@ export default function About() {
                     {job.period}
                   </span>
                 </div>
-                <p className="text-lg text-blue-600 dark:text-blue-400 mb-3">
+                <a
+                  href={job.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block text-lg text-blue-600 dark:text-blue-400 mb-3 hover:underline"
+                >
                   {job.company}
-                </p>
+                </a>
                 <p className="text-gray-700 dark:text-gray-300">
                   {job.description}
                 </p>
@@ -150,19 +162,27 @@ export default function About() {
           <div className="bg-white dark:bg-gray-800 rounded-lg p-6 border border-gray-200 dark:border-gray-700">
             <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
               <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100">
-                Bachelor of Science in Computer Science
+                Bachelor of Technology in Electronics and Electrical Engineering
               </h3>
               <span className="text-sm text-gray-500 dark:text-gray-400 mt-1 md:mt-0">
-                2014 - 2018
+                2017 - 2021
               </span>
             </div>
-            <p className="text-lg text-blue-600 dark:text-blue-400 mb-3">
-              University of Technology
-            </p>
+            <a
+              href="https://kiit.ac.in/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block text-lg text-blue-600 dark:text-blue-400 mb-3 hover:underline"
+            >
+              Kalinga Institute of Industrial Technology (KIIT), Bhubaneswar,
+              Odisha
+            </a>
             <p className="text-gray-700 dark:text-gray-300">
-              Graduated with honors. Focused on software engineering,
-              algorithms, and web development. Completed capstone project on
-              building a real-time collaboration platform.
+              Completed a four-year degree in Electronics and Electrical
+              Engineering, where I built strong analytical skills. Driven by my
+              passion for software development, I self-learned programming and
+              web technologies, laying the foundation for my career in software
+              engineering.
             </p>
           </div>
         </section>
@@ -178,19 +198,20 @@ export default function About() {
                 Technology
               </h3>
               <p className="text-gray-700 dark:text-gray-300">
-                I'm always exploring new technologies and frameworks. I enjoy
-                experimenting with emerging tools and contributing to
-                open-source projects.
+                I'm passionate about exploring new technologies and frameworks.
+                I enjoy experimenting with emerging tools and collaborating with
+                others to create meaningful solutions.
               </p>
             </div>
             <div className="bg-white dark:bg-gray-800 rounded-lg p-6 border border-gray-200 dark:border-gray-700">
               <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-3">
-                Learning & Writing
+                Learning & Collaboration
               </h3>
               <p className="text-gray-700 dark:text-gray-300">
-                I love sharing knowledge through technical writing and
-                mentoring. Writing helps me solidify my understanding and help
-                others in their learning journey.
+                I love continuous learning, mentoring, and knowledge-sharing.
+                Writing and discussions not only help me deepen my understanding
+                but also allow me to collaborate and grow with the developer
+                community.
               </p>
             </div>
           </div>
