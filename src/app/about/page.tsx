@@ -209,8 +209,8 @@ export default function About() {
               </h3>
               <p className="text-gray-700 dark:text-gray-300">
                 I enjoy continuous learning and exploring new ideas with the
-                developer community. Outside of tech, I love capturing moments
-                through photography.
+                developer community, and I also love capturing moments through
+                photography.
               </p>
             </div>
           </div>
