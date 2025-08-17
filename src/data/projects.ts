@@ -17,7 +17,8 @@ export const allProjects: Project[] = [
       "An AI-powered Chrome extension that delivers instant summaries, clarifications, and answers from active web pages.",
     techStack: ["React", "TypeScript", "Gemini 1.5 Flash-8B"],
     githubUrl: "https://github.com/SandipDeb05/clarityai",
-    // liveUrl: "https://clarityai-demo.com",
+    liveUrl:
+      "https://chromewebstore.google.com/detail/clarityai/bccbebpekojigejhhdadpgladoddohof",
     featured: true,
   },
   {
