@@ -5,8 +5,8 @@ import { recentPosts } from "@/data/blog";
 
 export default function Home() {
   return (
+    // TODO: Need HeroSection component
     <div className="min-h-screen">
-      {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-800 dark:to-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-gray-100 mb-6">
@@ -34,8 +34,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* Short Bio */}
+      {/* TODO: Need ShortBio component */}
       <section className="py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-6">
@@ -56,8 +55,7 @@ export default function Home() {
           </Link>
         </div>
       </section>
-
-      {/* Featured Projects */}
+      {/* TODO: Need Featured_Projects Component*/}
       <section className="py-16 bg-gray-50 dark:bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -124,71 +122,6 @@ export default function Home() {
               className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors"
             >
               View All Projects
-              <ArrowRightIcon className="ml-2 h-5 w-5" />
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Recent Blog Posts */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-4">
-              Recent Blog Posts
-            </h2>
-            <p className="text-lg text-gray-700 dark:text-gray-300">
-              Thoughts, tutorials, and insights from my development journey.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {recentPosts.map((post) => (
-              <article
-                key={post.slug}
-                className="bg-white dark:bg-gray-900 rounded-lg shadow-md hover:shadow-lg transition-shadow p-6 border border-gray-200 dark:border-gray-700"
-              >
-                <div className="mb-4">
-                  <span className="text-sm text-gray-500 dark:text-gray-400">
-                    {new Date(post.date).toLocaleDateString("en-US", {
-                      year: "numeric",
-                      month: "long",
-                      day: "numeric",
-                    })}
-                  </span>
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-3">
-                  {post.title}
-                </h3>
-                <p className="text-gray-700 dark:text-gray-300 mb-4">
-                  {post.description}
-                </p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {post.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="px-2 py-1 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 text-xs rounded"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-                <Link
-                  href={`/blog/${post.slug}`}
-                  className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium"
-                >
-                  Read more →
-                </Link>
-              </article>
-            ))}
-          </div>
-
-          <div className="text-center mt-12">
-            <Link
-              href="/blog"
-              className="inline-flex items-center px-6 py-3 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 font-medium rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
-            >
-              View All Posts
               <ArrowRightIcon className="ml-2 h-5 w-5" />
             </Link>
           </div>

@@ -1,4 +1,6 @@
 import { CheckIcon } from "@heroicons/react/24/outline";
+import Image from "next/image";
+import MyAboutProfileImage from "../../../public/static/about_profile_image.jpg";
 
 export default function About() {
   const skills = [
@@ -50,12 +52,23 @@ export default function About() {
         {/* Header */}
         <div className="text-center mb-16">
           <h1 className="text-4xl font-bold text-gray-900 dark:text-gray-100 mb-6">
-            About Me
+            Hey there 👋
           </h1>
           <p className="text-xl text-gray-700 dark:text-gray-300 max-w-3xl mx-auto">
-            I'm a passionate Software Engineer who loves building innovative
-            solutions and learning new technologies.
+            I'm Sandip Deb, a passionate Software Engineer who loves building
+            innovative solutions and learning new technologies.
           </p>
+        </div>
+
+        <div>
+          <Image
+            // src={MyAboutProfileImage}
+            src={"https://avatar.iran.liara.run/public/25"}
+            alt="Sandip Deb"
+            width={200}
+            height={200}
+            className="rounded-full mx-auto mb-8"
+          />
         </div>
 
         {/* Bio Section */}

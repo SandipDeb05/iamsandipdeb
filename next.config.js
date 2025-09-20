@@ -4,7 +4,7 @@ const nextConfig = {
     mdxRs: true,
   },
   images: {
-    domains: ["localhost"],
+    domains: ["localhost", "avatar.iran.liara.run"],
   },
 };
 
