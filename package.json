@@ -1,7 +1,9 @@
 {
   "name": "iamsandipdeb",
+  "description": "This repository contains the source code for my personal portfolio website, designed to showcase my work, projects, and professional journey.",
   "version": "1.0.0",
   "private": true,
+  "author: "Sandip Deb",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
