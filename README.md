@@ -4,12 +4,12 @@ A minimal, professional personal portfolio website built with Next.js 14, TypeSc
 
 ## Features
 
-- 🚀 **Next.js 14** with App Router
-- 💻 **TypeScript** for type safety
-- 🎨 **Tailwind CSS** for styling
-- 🌙 **Dark/Light Mode** toggle with persistence
-- 📱 **Responsive Design** mobile-first approach
-- 🔍 **SEO Optimized** with metadata
+- **Next.js 14** with App Router
+- **TypeScript** for type safety
+- **Tailwind CSS** for styling
+- **Dark/Light Mode** toggle with persistence
+- **Responsive Design** mobile-first approach
+- **SEO Optimized** with metadata
 
 ## Pages
 
